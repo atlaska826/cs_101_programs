@@ -1,0 +1,58 @@
+Name: Atlas Mallams
+Section: 0018
+Program 1 Part 2
+Creation Date: August 28, 2023
+Due Date: September 10, 2023
+
+ERROR #1
+Code:
+>>> a
+Produces: NameError
+
+ERROR #2
+Code:
+>>> int_num = int(input('Enter integer: '))
+    Enter integer: a
+Produces: ValueError
+
+ERROR #3
+Code:
+>>> print(Hello world!)
+Produces: SyntaxError
+
+ERROR #4
+Code:
+>>> print('Hello world' + 5)
+Produces: TypeError
+
+ERROR #5
+Code:
+>>> x = 5 / 0
+Produces: ZeroDivisionError
+
+ERROR #6
+Code:
+>>> my_list = [0, 1, 2, 3]
+    print(my_list[4])
+Produces: IndexError
+
+ERROR #7
+Code:
+>>> my_list.add(7)
+Produces: AttributeError
+
+ERROR #8
+Code:
+>>> from math import date
+Produces: ImportError
+
+ERROR #9
+Code:
+>>> import razer
+Produces: ModuleNotFoundError
+
+ERROR #10
+Code:
+>>> my_dict = {'class': 'Comp-Sci 101', 'size': 48}
+    print(my_dict['teacher'])
+Produces: KeyError
