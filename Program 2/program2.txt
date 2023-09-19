@@ -3,3 +3,44 @@ Class Section: 0018
 Program 1 Algorithm
 Creation Date: September 16, 2023
 Due Date: September 24, 2023
+
+In this programming assignment, you will create a simple calculator program that allows users to
+perform basic arithmetic operations. You will use branching (if-else) statements and iteration
+(loops) to implement the calculator's functionalities.
+
+INSTRUCTIONS
+1. Display Menu
+Your program should display a menu of available operations.
+    - Addition
+    - Subtraction
+    - Multiplication
+    - Division
+
+2. User Input
+Prompt the user to select an operation by entering the corresponding number from
+the menu (See sample output)
+
+3. Perform Calculation
+Based on the user's choice, perform the selected operation on two numbers
+entered by the user.
+
+4. Display Result:
+Display the result of the calculation to the user.
+
+5. Repeat or Exit:
+After displaying the result, ask the user if they want to perform another calculation:
+    - If yes, repeat the process.
+    - If not:
+        - Display the total number of operations the user performed and display the used operation
+          and the number of times it was used. (See Sample Output).
+        - Then exit the program.
+
+Requirements:
+    - Use a loop to repeatedly allow the user to perform calculations until they choose to exit.
+    - Implement branching (if-else) statements to handle different operations.
+    - Need to validate user input (See Sample output).
+    - Handle division by zero:
+        - If the denominator is zero, program needs to ask the user to renter another
+          value.
+        - Program will apply division once the user enters nonzero number.
+    - Include comments to explain the purpose of different parts of your code.
