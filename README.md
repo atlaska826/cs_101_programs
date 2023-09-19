@@ -2,8 +2,8 @@
 
 ### Table of contents:
 * **Program 1**
-  * [Code File](program1_atlas-mallams.py)
-  * [Error Simulator Text File](program1.txt)
+  * [Python Code File](program1.py)
+  * [Error Examples Text File](program1.txt)
 * **Program 2**
-  * [Code File](program_atlas-mallams.py)
-  * [Algorithm .txt File](program2.txt)
+  * [Python Code File](program2.py)
+  * [Algorithm Text File](program2.txt)
