@@ -1,7 +1,7 @@
 Name: Atlas Mallams
 Class Section: 0018
 Program 1 Algorithm
-Creation Date: September 16, 2023
+Creation Date: September 19, 2023
 Due Date: September 24, 2023
 
 In this programming assignment, you will create a simple calculator program that allows users to
