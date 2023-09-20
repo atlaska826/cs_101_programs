@@ -6,28 +6,101 @@ Due Date: September 24, 2023
 
 Step 1: Start
 
-Step 2: Declare add_count, subtract_count, multiply_count, divide_count
+Step 2: Initialize variables add_count, subtract_count, multiply_count, divide_count
+    2.1: Set add_count = 0
+    2.2: Set subtract_count = 0
+    2.3: Set multiply_count = 0
+    2.4: Set divide_count = 0
 
-Step 3: Initialize variables
-    add_count = 0
-    subtract_count = 0
-    multiply_count = 0
-    divide_count = 0
 
-FIXME Step #: Define program functions
+Step 3: Declare print_display_menu()
+    3.1: Print "1. Addition"
+    3.2: Print "2. Subtraction"
+    3.3: Print "3. Multiplication"
+    3.4: Print "4. Division"
+    3.5: Print "5. Exit"
 
-    print_display_name():
-        Stuff
-    print_total_operations():
-        Stuff
-    ask_new_calculation():
-        Stuff
-    get_user_operation():
-        Stuff
-    add(num1, num2)
-    subtract(num1, num2)
-    multiply(num1, num2)
-    divide(num1, num2)
+
+Step 4: Declare print_total_operations()
+    4.1: Set integer operation_count equal to the sum of add_count + subtract_count + multiply_count + divide_count
+    4.2: Print number of total operations
+    4.3: IF add_count greater than 0
+        Print number of addition operations performed
+    4.4: IF subtract_count greater than 0
+        Print number of subtraction operations performed
+    4.5: IF multiply_count greater than 0
+        Print number of multiplication operations performed
+    4.6: IF divide_count greater than 0
+        Print number of division operations performed
+    4.7 IF all count variables are equal to 0
+        Print "No operations."
+    4.8 Print goodbye message to the user
+
+
+Step 5: Declare ask_new_calculation()
+    5.1: FIXME
+
+Step 6: Declare get_user_operation()
+    6.1: Call print_display_menu()
+    6.2: Take integer input for answer_choice (which corresponds to one of 5 available operations)
+    6.3: WHILE answer_choice is not greater than 0 or less than 6
+        6.3.1: Print error message to user
+        6.3.2: Take integer input for answer_choice
+    6.4: Returns answer_choice
+
+
+Step 7: Declare add(num1, num2)
+    Returns sum of num1 + num2
+
+Step 8: Declare subtract(num1, num2)
+    Returns difference of num1 - num2
+
+Step 9: Declare multiply(num1, num2)
+    Returns product of num1 * num2
+
+Step 10: Declare divide(num1, num2)
+    Returns quotient of num1 / num2
+
+Step 11: Print greeting welcoming user to the program
+
+Step 12: Repeat steps until loop is terminated (while True)
+    12.1: Set integer variable operation to return value of get_user_operation() --> Returns a number between 1-5 (inclusive)
+
+    12.3: IF operation equals 1
+        12.3.1: Increment add_count by 1
+        12.3.2: Set num1 to an integer value from user input
+        12.3.3: Set num2 to an integer value from user input
+        12.3.4: Print output of equation and return value of add(num1, num2)
+    12.4: ELIF operation equals 2
+        12.4.1: Increment subtract_count by 1
+        12.4.2: Set num1 to an integer value from user input
+        12.4.3: Set num2 to an integer value from user input
+        12.4.4: Print output of equation and return value of subtract(num1, num2)
+    12.5: ELIF operation equals 3
+        12.5.1: Increment multiply_count by 1
+        12.5.2: Set num1 to an integer value from user input
+        12.5.3: Set num2 to an integer value from user input
+        12.5.4: Print output of equation and return value of multiply(num1, num2)
+    12.6: ELIF operation equals 4
+        12.6.1: Increment divide_count by 1
+        12.6.2: Set num1 to an integer value from user input
+        12.6.3: Set num2 to an integer value from user input
+        12.6.4: Repeat steps until num2 does not equal 0
+            12.6.4a: Print error message for divide by zero to user
+            12.6.4b: Set num2 to an integer value from user input
+        12.6.5: Print output of equation and return value of divide(num1, num2)
+    12.7: ELIF operation equals 5
+        Break (ends loop)
+
+    12.8: Set boolean new_calc equal to return value of ask_new_calculation()
+    12.9: IF new_calc is not True
+        Break (ends loop)
+
+
+Step 13: Call print_total_operations()
+
+Step 14: Stop
+
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -36,32 +109,6 @@ perform basic arithmetic operations. You will use branching (if-else) statements
 (loops) to implement the calculator's functionalities.
 
 INSTRUCTIONS
-1. Display Menu
-Your program should display a menu of available operations.
-    - Addition
-    - Subtraction
-    - Multiplication
-    - Division
-
-2. User Input
-Prompt the user to select an operation by entering the corresponding number from
-the menu (See sample output)
-
-3. Perform Calculation
-Based on the user's choice, perform the selected operation on two numbers
-entered by the user.
-
-4. Display Result:
-Display the result of the calculation to the user.
-
-5. Repeat or Exit:
-After displaying the result, ask the user if they want to perform another calculation:
-    - If yes, repeat the process.
-    - If not:
-        - Display the total number of operations the user performed and display the used operation
-          and the number of times it was used. (See Sample Output).
-        - Then exit the program.
-
 Requirements:
     - Use a loop to repeatedly allow the user to perform calculations until they choose to exit.
     - Implement branching (if-else) statements to handle different operations.
