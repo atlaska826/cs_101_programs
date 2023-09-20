@@ -8,14 +8,17 @@ Due Date: September 24, 2023
 
 # TODO: Add documentation comments to code
 
-'''PROGRAM VARIABLES'''
+""" OPERATION COUNT VARIABLES """
 add_count = 0
 subtract_count = 0
 multiply_count = 0
 divide_count = 0
 
-'''FUNCTIONS'''
+""" FUNCTIONS """
+
+
 def print_display_menu():
+    """Prints list of available operations with their corresponding selection number."""
     print('\n1. Addition')
     print('2. Subtraction')
     print('3. Multiplication')
@@ -24,6 +27,8 @@ def print_display_menu():
 
 
 def print_total_operations():
+    """Computes and prints the total amount of operations. Also prints how many times each operation was used as long
+    as it was used once."""
     operation_count = add_count + subtract_count + multiply_count + divide_count
     print(f'\nYou had {operation_count} arithmetic operations as below:')
     if add_count > 0:
@@ -41,6 +46,7 @@ def print_total_operations():
 
 
 def ask_new_calculation():
+    """Asks the user if they would like to perform another operation, and returns the corresponding boolean value."""
     perform_new_calc = input('\nDo you want to perform another calculation? (y/n): ').lower()
 
     while perform_new_calc != 'y' and perform_new_calc != 'n':
@@ -52,6 +58,7 @@ def ask_new_calculation():
 
 
 def get_user_operation():
+    """Allows the user to select which operation they want to perform."""
     print_display_menu()
     answer_choice = int(input('Please select an operation (1-5): '))
     while not (0 < answer_choice < 6):
@@ -61,6 +68,7 @@ def get_user_operation():
 
 
 def add(num1, num2):
+    """Adds the sum of FIXME num1 and num2"""
     return num1 + num2
 
 
@@ -76,10 +84,10 @@ def divide(num1, num2):
     return num1 / num2
 
 
-'''MAIN CODE'''
+""" MAIN CODE """
 print('Welcome to the Simple Calculator!')
 
-while True:
+while True:  # Loop runs until terminated by a break statement
     operation = get_user_operation()
 
     if operation == 1:
@@ -108,9 +116,8 @@ while True:
     elif operation == 5:
         break
 
-    # Call function for play again
     new_calc = ask_new_calculation()
     if not new_calc:
         break
 
-print_total_operations()
+print_total_operations()  # Prints the amount of operations summary before the program ends

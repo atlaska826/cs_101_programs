@@ -3,7 +3,10 @@ Class Section: 0018
 Program 1 Algorithm
 Creation Date: September 19, 2023
 Due Date: September 24, 2023
-
+------------------------------------------------------------------------------------------------------------------------
+This algorithm is for a simple calculator program that allows users to select from 4 different basic arithmetic
+operations, and one other options to end the program.
+------------------------------------------------------------------------------------------------------------------------
 Step 1: Start
 
 Step 2: Initialize variables add_count, subtract_count, multiply_count, divide_count
@@ -14,6 +17,7 @@ Step 2: Initialize variables add_count, subtract_count, multiply_count, divide_c
 
 
 Step 3: Declare print_display_menu()
+WHEN CALLED
     3.1: Print "1. Addition"
     3.2: Print "2. Subtraction"
     3.3: Print "3. Multiplication"
@@ -22,6 +26,7 @@ Step 3: Declare print_display_menu()
 
 
 Step 4: Declare print_total_operations()
+WHEN CALLED
     4.1: Set integer operation_count equal to the sum of add_count + subtract_count + multiply_count + divide_count
     4.2: Print number of total operations
     4.3: IF add_count greater than 0
@@ -38,9 +43,17 @@ Step 4: Declare print_total_operations()
 
 
 Step 5: Declare ask_new_calculation()
-    5.1: FIXME
+WHEN CALLED
+    5.1: Set perform_new_calc to user input
+    5.2: WHILE perform new_calc.lower() is not equal to 'y' or 'n'
+        Set perform_new_calc to user input
+    5.3: IF perform_new_calc is 'y'
+        return True
+    5.4 ELIF perform_new_calc is 'n'
+        return False
 
 Step 6: Declare get_user_operation()
+WHEN CALLED
     6.1: Call print_display_menu()
     6.2: Take integer input for answer_choice (which corresponds to one of 5 available operations)
     6.3: WHILE answer_choice is not greater than 0 or less than 6
@@ -50,15 +63,19 @@ Step 6: Declare get_user_operation()
 
 
 Step 7: Declare add(num1, num2)
+WHEN CALLED
     Returns sum of num1 + num2
 
 Step 8: Declare subtract(num1, num2)
+WHEN CALLED
     Returns difference of num1 - num2
 
 Step 9: Declare multiply(num1, num2)
+WHEN CALLED
     Returns product of num1 * num2
 
 Step 10: Declare divide(num1, num2)
+WHEN CALLED
     Returns quotient of num1 / num2
 
 Step 11: Print greeting welcoming user to the program
@@ -100,21 +117,3 @@ Step 12: Repeat steps until loop is terminated (while True)
 Step 13: Call print_total_operations()
 
 Step 14: Stop
-
-
-------------------------------------------------------------------------------------------------------------------------
-
-In this programming assignment, you will create a simple calculator program that allows users to
-perform basic arithmetic operations. You will use branching (if-else) statements and iteration
-(loops) to implement the calculator's functionalities.
-
-INSTRUCTIONS
-Requirements:
-    - Use a loop to repeatedly allow the user to perform calculations until they choose to exit.
-    - Implement branching (if-else) statements to handle different operations.
-    - Need to validate user input (See Sample output).
-    - Handle division by zero:
-        - If the denominator is zero, program needs to ask the user to renter another
-          value.
-        - Program will apply division once the user enters nonzero number.
-    - Include comments to explain the purpose of different parts of your code.
