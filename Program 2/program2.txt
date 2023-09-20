@@ -4,6 +4,33 @@ Program 1 Algorithm
 Creation Date: September 19, 2023
 Due Date: September 24, 2023
 
+Step 1: Start
+
+Step 2: Declare add_count, subtract_count, multiply_count, divide_count
+
+Step 3: Initialize variables
+    add_count = 0
+    subtract_count = 0
+    multiply_count = 0
+    divide_count = 0
+
+FIXME Step #: Define program functions
+
+    print_display_name():
+        Stuff
+    print_total_operations():
+        Stuff
+    ask_new_calculation():
+        Stuff
+    get_user_operation():
+        Stuff
+    add(num1, num2)
+    subtract(num1, num2)
+    multiply(num1, num2)
+    divide(num1, num2)
+
+------------------------------------------------------------------------------------------------------------------------
+
 In this programming assignment, you will create a simple calculator program that allows users to
 perform basic arithmetic operations. You will use branching (if-else) statements and iteration
 (loops) to implement the calculator's functionalities.

@@ -20,6 +20,7 @@ def print_display_menu():
     print('4. Division')
     print('5. Exit\n')
 
+
 def print_total_operations():
     operation_count = add_count + subtract_count + multiply_count + divide_count
     print(f'\nYou had {operation_count} arithmetic operations as below:')
@@ -35,6 +36,8 @@ def print_total_operations():
         print(f'No operations.')
 
     print('\nExiting the calculator. Goodbye!')
+
+
 def ask_new_calculation():
     perform_new_calc = input('\nDo you want to perform another calculation? (y/n): ').lower()
 
@@ -45,24 +48,31 @@ def ask_new_calculation():
     else:
         return False
 
+
 def get_user_operation():
     print_display_menu()
     answer_choice = int(input('Please select an operation (1-5): '))
-    while not(0 < answer_choice < 6):
+    while not (0 < answer_choice < 6):
         print('Invalid choice. Please select a valid operation.\n')
         answer_choice = int(input('Please select an operation (1-5): '))
     return answer_choice
+
+
 def add(num1, num2):
     return num1 + num2
+
 
 def subtract(num1, num2):
     return num1 - num2
 
+
 def multiply(num1, num2):
     return num1 * num2
 
+
 def divide(num1, num2):
     return num1 / num2
+
 
 '''MAIN CODE'''
 print('Welcome to the Simple Calculator!')
