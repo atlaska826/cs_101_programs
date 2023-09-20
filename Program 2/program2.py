@@ -6,8 +6,6 @@ Creation Date: September 19, 2023
 Due Date: September 24, 2023
 """
 
-# TODO: Add documentation comments to code
-
 """ OPERATION COUNT VARIABLES """
 add_count = 0
 subtract_count = 0
