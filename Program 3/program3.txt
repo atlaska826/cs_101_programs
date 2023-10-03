@@ -4,7 +4,8 @@ Program 3 Algorithm
 Creation Date: October 3, 2023
 Due Date: October 15, 2023
 ------------------------------------------------------------------------------------------------------------------------
-Placeholder
+This program allows the user to answer 3 quiz questions, and outputs their correct answer percentage as many times as
+they would like. The questions are randomized every time the user plays.
 ------------------------------------------------------------------------------------------------------------------------
 Step 1: Start
 
@@ -13,28 +14,63 @@ Step 2: Import random module
 Step 3: Initialize variable correct_count and set = 0
 
 Step 4: Initialize the list, questions, a list of 3 dictionaries with key/values...
-    4.1: 'question#': 'Question',
+    (Do following three times with each dictionary a separate list item)
+    4.1: 'question': 'Question',
     4.2: 'options': ['a)', 'b)', 'c)', 'd)'],
     4.3: 'correct_answer': correction option index as an int
 
-Step #: Declare randomize_questions()  TODO Randomize order of questions each game
-List of 3 numbers
-Random number logic to assign each number to a question.
-Loops through numbers in ascending order. --> Swap questions list items
+Step 5: Declare randomize_questions()
+    5.1: Create an empty_list order
+    5.2: For loop that runs 3 times
+        5.2.1: Sets num = a random integer between 0 and 2 (inclusive)
+        5.2.2: Repeats above step while num is in order list
+        5.2.3: Appends num to order
+    5.3: Returns order list
 
-Step #: Print greeting to user
+Step 6: Declare ask_question(int question_num, int index)
+    6.1: Create a list, accepted_answers, with the value of 'a', 'b', 'c', 'd'
+    6.2: Set question to the value of questions[index]
+    6.3: Output the question
+    6.4: Loop through the 'options' list and output each option on a new line
+    6.5: Set user_answer = user input (case-insensitive)
+    6.6: While user_answer not in accepted_answers
+        6.6.1: Output error message to the user
+        6.6.2: Ask the user to input their answer again
+    6.7: If index of user_answer in accepted_answers == question['correct_answer']
+            Output correct answer message
+         Else
+            Output incorrect answer message
 
-Step #: Repeat steps until loop is terminated (while True)
-    Step #: Iterate through questions and output each question to the user one at a time
-        #.1: Output the question to the user
-        #.2: USER INPUT
-        #.3: CONDITIONALS + FEEDBACK  TODO Handle invalid inputs
-        #.4: Increment count IF user answered correctly
+Step 7: Declare play_again()
+    7.1: Set quiz_again to user input
+    7.2: While quiz_again (not case-sensitive) is not equal to 'yes' or 'no'
+            Output error message to user
+            Set quiz_again to user input
+    7.3: If quiz_again is 'yes'
+            return True
+         Else
+            return False
 
-    Step #: Output user's score as a percentage TODO
+Step 8: Print greeting to user
 
-    Step #: Ask user if they want to play again TODO Conditionals
+Step 9: Repeat steps until loop is terminated (while True)
+    9.1: Set question_order = Return of randomize_questions()
+    9.2: Set question_count = 1
+    9.3: Iterate through question_order
+        9.3.1: Call ask_question with the arguments question_count and the iteration value
+        9.3.2: If return value of above step is True
+                  Increment correct_count by 1
+        9.3.2: Increment question_count by 1
 
-Step #: Print goodbye message to user
+    9.4: Output user's score as a percentage
 
-Step #: Stop
+    9.5: Ask user if they want to play again
+        9.5.1: Set play_again to return value of play_again()
+        9.5.2: If play_again is False
+                  break (ends while loop)
+               Set correct_count = 0 (runs if loop is not terminated)
+               Output a blank line
+
+Step 10: Print goodbye message to user
+
+Step 11: Stop
