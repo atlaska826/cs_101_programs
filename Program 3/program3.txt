@@ -3,3 +3,38 @@ Class Section: 0018
 Program 3 Algorithm
 Creation Date: October 3, 2023
 Due Date: October 15, 2023
+------------------------------------------------------------------------------------------------------------------------
+Placeholder
+------------------------------------------------------------------------------------------------------------------------
+Step 1: Start
+
+Step 2: Import random module
+
+Step 3: Initialize variable correct_count and set = 0
+
+Step 4: Initialize the list, questions, a list of 3 dictionaries with key/values...
+    4.1: 'question#': 'Question',
+    4.2: 'options': ['a)', 'b)', 'c)', 'd)'],
+    4.3: 'correct_answer': correction option index as an int
+
+Step #: Declare randomize_questions()  TODO Randomize order of questions each game
+List of 3 numbers
+Random number logic to assign each number to a question.
+Loops through numbers in ascending order. --> Swap questions list items
+
+Step #: Print greeting to user
+
+Step #: Repeat steps until loop is terminated (while True)
+    Step #: Iterate through questions and output each question to the user one at a time
+        #.1: Output the question to the user
+        #.2: USER INPUT
+        #.3: CONDITIONALS + FEEDBACK  TODO Handle invalid inputs
+        #.4: Increment count IF user answered correctly
+
+    Step #: Output user's score as a percentage TODO
+
+    Step #: Ask user if they want to play again TODO Conditionals
+
+Step #: Print goodbye message to user
+
+Step #: Stop

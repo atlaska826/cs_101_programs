@@ -7,3 +7,6 @@
 * **Program 2**
   * [Python Code File](program2.py)
   * [Algorithm Text File](program2.txt)
+* **Program 3**
+  * [Python Code File](program3.py)
+  * [Algorithm Text File](program3.txt)
