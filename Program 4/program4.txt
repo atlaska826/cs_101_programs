@@ -7,3 +7,39 @@ Due Date: October 29, 2023
 Brief description
 ------------------------------------------------------------------------------------------------------------------------
 Step 1: Start
+
+Step 2: Import modules
+    2.1: Import csv
+    2.2: Import random
+
+Step 3: Initialize variables
+    3.1: Create dictionary menu with keys (1-3) and corresponding menu options
+    3.2 Create an empty list input_lines
+    3.3: Create an empty list first_input_line
+
+FUNCTION DEFINITIONS
+Step #: Define read_file(in_name)
+
+Step #: Define write_file()
+
+Step #: Define create_status_col()
+
+Step #: Define create_salary_col()
+
+Step #: Define calc_average_age()
+
+Step #: Define calc_average_salary()
+
+Step #: Define display_status()
+
+Step #: Define lookup_person(name)
+
+Step #: Define display_menu()
+
+-------------
+MAIN PROGRAM
+-------------
+Step #: WHILE True loop
+    #.#: Stuff
+
+Step #: Stop
