@@ -72,7 +72,7 @@ def calc_average_age():
     average_age = 0
     for line in input_lines:
         average_age += int(line[1])
-    return average_age / len(input_lines)
+    print(f'\nAverage age: {average_age / len(input_lines):.2f}')
 
 
 def calc_average_salary():
@@ -91,7 +91,7 @@ def display_status():
         else:
             young_count += 1
     print(f'Number of adult individuals: {adult_count}')
-    print(f'Number of adult individuals: {young_count}')
+    print(f'Number of young individuals: {young_count}')
 
 
 def lookup_person(name):
@@ -101,8 +101,8 @@ def lookup_person(name):
             continue
         else:
             found_person = True
-            print('Search Result:\n')
             count = 0
+            print('\nSearch Result:')
             for item in line[:-1]:
                 print(f'{first_input_line[count]}: {item}')
                 count += 1
@@ -130,7 +130,7 @@ while True:
     except IOError:
         print('There was an error processing the chosen file.\n')
 
-print(f'Average age: {calc_average_age():.2f}')
+calc_average_age()
 create_status_col()
 create_salary_col()
 
@@ -148,12 +148,13 @@ while True:
         continue
 
     if menu_choice == 1:
-        lookup_name = input('Enter the name to search for ==> ')
+        lookup_name = input('\nEnter the name to search for ==> ')
         try:
             lookup_person(lookup_name)
         except KeyError:
             print(f'No person with the name {lookup_name} found.')
     elif menu_choice == 2:
-        print(f'Average salary: ${calc_average_salary():.2f}')
+        print(f'\nAverage salary: ${calc_average_salary():.2f}')
     else:
+        print('\nData saved to \'output_data.csv\'. Exiting...')
         break

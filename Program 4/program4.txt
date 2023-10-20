@@ -17,29 +17,122 @@ Step 3: Initialize variables
     3.2 Create an empty list input_lines
     3.3: Create an empty list first_input_line
 
+--------------------
 FUNCTION DEFINITIONS
-Step #: Define read_file(in_name)
+--------------------
+Step 4: Define read_file(in_name)
+    4.1: Set first_time variable to True
+    4.2: Open input_file
+        4.2.1: Initialize csv.reader(input_file) as csv_reader
+        4.2.2: FOR Loop -- row in csv_reader:
+            4.2.2.1: IF first_time is True
+                        Extend first_input_line with row
+                        Set first_time to False
+                        Continue
+            4.2.2.2: Append row to input_lines
+    4.3: Call write_file()
 
-Step #: Define write_file()
+Step 5: Define write_file()
+    5.1: Open output_file
+    5.2: Initialize csv.writer as csv_writer
+    5.3: Write the row first_input_line to output_data.csv
+    5.4: FOR Loop -- line in input_lines:
+        5.4.1: Write row line to output_data.csv
 
-Step #: Define create_status_col()
+Step 6: Define create_status_col()
+    6.1: Append 'Status' to first_input_line
+    6.2: FOR Loop -- line in input_lines:
+        6.2.1: IF line at index 1 is greater than or equal to 25
+            6.2.1.1: Append 'Adult' to line
+        6.2.2: ELSE:
+            6.2.2.1: Append 'Young' to line
+    6.3: Call write_file()
+    6.4: Call display_status()
 
-Step #: Define create_salary_col()
+Step 7: Define create_salary_col()
+    7.1: Append 'Salary' to first_input_line
+    7.2: FOR Loop -- line in input_lines:
+        Append a random integer between 30000 and 100000 (inclusive) to line
+    7.3: Call write_file()
 
-Step #: Define calc_average_age()
+Step 8: Define calc_average_age()
+    8.1: Set average_age equal to 0
+    8.2 FOR Loop - line in input_lines:
+        8.2.1: Add value of line at index 1 to average_age
+    8.3: Print average_age / len(input_lines)
 
-Step #: Define calc_average_salary()
+Step 9: Define calc_average_salary()
+    9.1: Set average_salary equal to 0
+    9.2: FOR Loop -- line in input_lines:
+        9.2.1: Add value of line at index 4 to average_salary
+    9.3: Return average_salary / len(input_lines)
 
-Step #: Define display_status()
+Step 10: Define display_status()
+    10.1: Set adult_count equal to 0
+    10.2: Set young_count equal to 0
+    10.3: FOR Loop -- line in input_lines
+        10.3.1: IF line at index 3 equals "Adult":
+            10.3.1.1: Add 1 to adult_count
+        10.3.2: ELSE:
+            10.3.2.1: Add 1 to young_count
+    10.4: Print adult_count
+    10.5: Print young_count
 
-Step #: Define lookup_person(name)
+Step 11: Define lookup_person(name)
+    11.1: Set found_person equal to False
+    11.2: FOR Loop -- line in input_lines:
+        11.2.1: IF line at index 0 does not equal name
+            11.2.1.1: Continue
+        11.2.2: ELSE:
+            11.2.2.1: Set found_person to True
+            11.2.2.2: Set count equal to 0
+            11.2.2.3: Print search result header
+            11.2.3.4: FOR Loop -- item in line from start to index -1
+                        Print first_input_line at index count, and item
+                        Add 1 to count
+    11.3: IF found_person equals False
+        11.3.1: Raise KeyError
 
-Step #: Define display_menu()
+Step 12: Define display_menu()
+    12.1: Print header
+    12.2: FOR Loop - num, item in menu.items()
+        12.2.1: Print's the number and item
+    12.3: Print an empty line
 
--------------
-MAIN PROGRAM
--------------
-Step #: WHILE True loop
-    #.#: Stuff
+--------------------
+    MAIN PROGRAM
+--------------------
+Step 13: WHILE True loop
+    13.1: Take input_filename from user input
+    13.2: Try -- to call read_file(input_filename)
+        13.2.1: As long as no exceptions are thrown, then break
+    13.3: Except -- FileNotFoundError and print error message
+    13.4: Except -- IOError and print error message
 
-Step #: Stop
+Step 14: Call calc_average_age()
+
+Step 15: Call create_status_col()
+
+Step 16: Call create_salary_col()
+
+Step 17: WHILE True loop
+    17.1: Call display_menu()
+    17.2: Try -- Take integer menu_choice from user input
+    17.3: Except -- ValueError
+        17.3.1: Print error message
+        17.3.2: Continue
+    17.4: IF menu_choice is not in keys of menu:
+        17.4.1: Print error message
+        17.4.2: Continue
+    17.5: IF menu_choice is equal to 1:
+        17.5.1: Take lookup_name from user input
+        17.5.2: Try -- Call lookup_person(lookup_name)
+        17.5.3: Except -- KeyError and print error message
+    17.6: ELIF menu_choice is equal to 2:
+        17.6.1: Call average salary and print the result
+    17.7: ELSE:
+        17.7.1: Break
+
+Step 18: Print goodbye message
+
+Step 19: Stop
