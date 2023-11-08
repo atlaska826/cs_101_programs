@@ -6,11 +6,6 @@ Creation Date: October 18, 2023
 Due Date: October 29, 2023
 """
 
-# TODO
-# Add docstrings
-# Add comments
-# Try to break code
-
 
 """ IMPORTS """
 import csv

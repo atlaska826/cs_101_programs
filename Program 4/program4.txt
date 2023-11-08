@@ -4,7 +4,7 @@ Program 4 Algorithm
 Creation Date: October 18, 2023
 Due Date: October 29, 2023
 ------------------------------------------------------------------------------------------------------------------------
-Brief description
+This program opens an input file of people, and modifies the information outputting the new info to an output file.
 ------------------------------------------------------------------------------------------------------------------------
 Step 1: Start
 

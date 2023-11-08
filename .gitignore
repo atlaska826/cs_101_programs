@@ -247,3 +247,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,windows,venv
 /Program 4/output_data.csv
 /Program 4/p4_inputs.txt
+/Program 5/p5_inputs.txt
