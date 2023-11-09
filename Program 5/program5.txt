@@ -4,6 +4,103 @@ Program 5 Algorithm
 Creation Date: November 8, 2023
 Due Date: November 19, 2023
 ------------------------------------------------------------------------------------------------------------------------
-Summary
+This program uses classes to create a collection of books that the user can perform specific functions on
 ------------------------------------------------------------------------------------------------------------------------
 Step 1: Start
+
+Step 2: Create Book class
+    2.1: Initialize an empty list book_collection
+
+    2.2: Create constructor with the default values title='none', author='none', year=0, isbn='none', is_available=True
+         Set each variable to self.variable_name = variable_name
+
+    2.3: Define get_book_info(self) function
+        2.3.1: Return a list with the values self.title, self.author, self.year, self.isbn
+
+    2.4: Define check_availability(self) function
+        2.4.1: FOR Loop -- book in book_collection
+                IF book.title is equal to self.title
+                  IF book.is_available is True
+                    RETURN availability message
+                  ELSE
+                    RETURN unavailability message
+        2.4.2: RETURN Book not found message
+
+    2.5: Define add_book(self) function
+        2.5.1: FOR Loop -- book in book_collection
+                IF book.get_book_info() is equal to self.get_book_info()
+                  Set book.is_available to True
+                  RETURN Book added message
+        2.5.2: Append self to book_collection
+        2.5.3: RETURN Book added message
+
+    2.6: Define checkout(self) function
+        2.6.1: FOR Loop -- book in book_collection
+                IF book.get_book_info() is equal to self.get_book_info()
+                  Set book.is_available equal to False
+                  RETURN Book removed message
+               RETURN Book not found message
+
+    2.7: Define print_collection(self) function
+        2.7.1: Print header
+        2.7.2: IF the length of book_collection is equal to 0
+                Print empty book collection message
+        2.7.3: ELSE
+                Initialize available_book to True
+                FOR Loop -- book in book_collection
+                    IF book.is_available is equal to True
+                      Print book info
+                      Set available_book to True
+                IF available_book is False
+                    Print no available books message
+
+Step 3: Create dictionary variable menu, with the keys as the menu options, and the values as the menu descriptions
+
+Step 4: Define print_menu() function
+    4.1: Print formatting characters and Menu headlines
+    4.2: FOR Loop -- key and value in items of menu
+        4.2.1: Print key. value
+
+Step 5: Define input_book_info() function
+    5.1: Set title equal to user input
+    5.2: Set author equal to user input
+    5.2 WHILE True
+        5.2.1: Try -- Set year equal to integer user input and BREAK
+        5.2.2: Except -- ValueError and print error message
+    5.3: Set isbn to user input
+    5.4: RETURN Book object with arguments (title, author, year, isbn)
+
+<><><><>><><><><><><><><><><><><><><><><><><>
+Steps 6-13 repeat until BREAK -> (WHILE True)
+<><><><>><><><><><><><><><><><><><><><><><><>
+Step 6: Call print_menu()
+
+Step 7: Set menu_choice equal to user input.upper()
+
+Step 8: WHILE menu_choice is not in menu keys:
+    8.1: Output error message
+    8.2: Set menu_choice equal to user input.upper()
+
+Step 9: IF menu_choice is 'Q'
+    9.1: BREAK
+    9.2: Skip to Step 14
+
+Step 10: ELIF menu_choice is '1'
+    10.1: Call input_book_info()
+    10.2: Call add_book() on the return value of Step 10.1
+    10.3: Print the return value of the conjunction of 10.1 and 10.2
+
+Step 11: ELIF menu_choice is '2'
+    11.1: Call input_book_info()
+    11.2: Call checkout() on the return value of Step 11.1
+    11.3: Print the return value of the conjunction of 11.1 and 11.2
+
+Step 12: ELIF menu_choice is '3'
+    12.1: Set title equal to user input
+    12.2: Set author equal to user input
+    12.3: Print the return of Book.check_availability with the argument of Book(title, author)
+
+Step 13: ELIF menu_choice is '4'
+    13.1: Call Book.print_collection with the argument Book()
+
+Step 14: Stop
