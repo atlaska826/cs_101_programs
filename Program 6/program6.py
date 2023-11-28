@@ -18,7 +18,7 @@ class Animal:
         self.species = species
 
     def display_info(self):
-        print(f'{self.name} - Age: {self.age}, Species: {self.species}', end=', ')
+        print(f'{self.name} - Age: {self.age}, Species: {self.species}', end='')
 
 
 """ ------------ """
@@ -40,7 +40,7 @@ class Mammal(Animal):
 
     def display_info(self):
         Animal.display_info(self)
-        print(f'Fur Color: {self.fur_color}, Health: {self.health_status}')
+        print(f', Fur Color: {self.fur_color}, Health: {self.health_status}', end='')
 
 
 """ --------- """
@@ -56,7 +56,7 @@ class Zoo:
     def add_animal(self, animal):
         self.animals.append(animal)
 
-    def remove_animal(self, animal_name):  # FIXME: Check to make sure this works
+    def remove_animal(self, animal_name):
         for animal in self.animals:
             if animal.name == animal_name:
                 self.animals.remove(animal)
@@ -67,6 +67,7 @@ class Zoo:
         if len(self.animals) > 0:
             for animal in self.animals:
                 animal.display_info()
+                print()
             print()
 
 

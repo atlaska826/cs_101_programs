@@ -18,3 +18,7 @@
   * [Python Code File](Program%205/program5.py)
   * [Algorithm Code File](Program%205/program5.txt)
   * [Input Data File](Program%205/p5_inputs.txt)
+* **Program 6**
+  * [Python Code File](Program%206/program6.py)
+  * [Algorithm Code File](Program%206/program6.txt)
+  * [Input Data File](Program%206/p6_inputs.txt)

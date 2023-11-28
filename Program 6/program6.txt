@@ -4,6 +4,6 @@ Program 6 Algorithm
 Creation Date: November 28, 2023
 Due Date: December 9, 2023
 ------------------------------------------------------------------------------------------------------------------------
-Description
+This program uses inheritance to manage animals in a zoo.
 ------------------------------------------------------------------------------------------------------------------------
 Step 1: Start
